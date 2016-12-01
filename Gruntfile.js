@@ -43,12 +43,8 @@ module.exports = function(grunt) {
     },
 
     exec: {
-      echo_something: 'git status'
+      echo_something: 'git push live master'
     },
-
-
-
-
 
     cssmin: {
     },
@@ -98,6 +94,8 @@ module.exports = function(grunt) {
   // Main grunt tasks
   ////////////////////////////////////////////////////
 
+  // can we combine put mocha test to the front of build?
+
   grunt.registerTask('test', [
     'mochaTest'
   ]);
@@ -116,20 +114,12 @@ module.exports = function(grunt) {
     if (grunt.option('prod')) {
       // add your production server task here
       grunt.task.run([ 'server-prod']);
-
-
     } else {
       grunt.task.run([ 'server-dev' ]);
     }
   });
 
   grunt.registerTask('deploy', [
-    // add your deploy tasks here
-    //build
-    //upload if prod else serv-erdev
     'test', 'build', 'upload'
-
   ]);
-
-
 };
