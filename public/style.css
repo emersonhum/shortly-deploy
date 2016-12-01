@@ -6,7 +6,8 @@ body {
 
 a {
   color: #333;
-  font-size: 14px;
+  /*font-size: 14px;*/
+  font-size: 40px;
   text-decoration: none;
 }
 
