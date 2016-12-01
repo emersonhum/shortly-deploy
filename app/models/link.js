@@ -1,4 +1,30 @@
 var db = require('../config');
+
+var Schema = db.Schema;
+
+var linkSchema = new Schema({ 
+  url: String, 
+  baseUrl: String,
+  code: String,
+  title: String,
+  visits: Number,
+  createdAt: Date
+});
+
+var Link = db.model('Link', linkSchema);
+
+
+
+
+
+module.exports = Link;
+
+
+
+
+
+
+
 // var crypto = require('crypto');
 
 // var Link = db.Model.extend({
@@ -15,17 +41,3 @@ var db = require('../config');
 //     });
 //   }
 // });
-
-// module.exports = Link;
-
-
-var linkSchema = new db.Schema({ 
-  url: String, 
-  baseUrl: String,
-  code: String,
-  title: String,
-  visits: Number,
-  createdAt: Date
-});
-
-var Link = db.model('Link', linkSchema);

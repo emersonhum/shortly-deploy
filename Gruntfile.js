@@ -68,6 +68,7 @@ module.exports = function(grunt) {
 
     shell: {
       prodServer: {
+        command: 'git push live master'
       }
     },
   });
@@ -87,7 +88,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('server-prod', function (target) {
-    grunt.task.run([ 'exec' ]);
+    grunt.task.run([ 'shell' ]);
   });
 
   ////////////////////////////////////////////////////
