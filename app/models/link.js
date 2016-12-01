@@ -20,12 +20,12 @@ var db = require('../config');
 
 
 var linkSchema = new db.Schema({ 
-  url: 'string', 
-  baseUrl: 'string',
-  code: 'string',
-  title: 'string',
-  visits: 'integer',
-  timestamps: 'string'
+  url: String, 
+  baseUrl: String,
+  code: String,
+  title: String,
+  visits: Number,
+  createdAt: Date
 });
 
 var Link = db.model('Link', linkSchema);

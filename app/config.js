@@ -1,4 +1,4 @@
-// var path = require('path');
+var path = require('path');
 // var knex = require('knex')({
 //   client: 'sqlite3',
 //   connection: {
@@ -39,12 +39,15 @@
 
 
 var db = require('mongoose');
-db.connect('mongodb://localhost/test');
+var link = path.join(__dirname, '../db/shortly.sqlite');
+console.log(link);
+db.connect('mongodb://localhost' + link);
 
-var db = db.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
+// var db = db.connection;
+db.connection.on('error', console.error.bind(console, 'connection error:'));
+db.connection.once('open', function() {
   // we're connected!
+  console.log('we gucci');
 });
 
 
