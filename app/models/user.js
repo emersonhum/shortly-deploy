@@ -19,7 +19,6 @@ module.exports = User;
 
 
 
-
 // var User = db.Model.extend({
 //   tableName: 'users',
 //   hasTimestamps: true,

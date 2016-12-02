@@ -1,9 +1,13 @@
 var path = require('path');
+// might not need
 
 var db = require('mongoose');
 var link = path.join(__dirname, '../db/shortly.mongoose');
-console.log(link);
+// console.log(link);
 db.connect('mongodb://localhost' + link);
+
+// db.connect('mongodb://localhost/shortly.mongoose);
+
 
 db.connection.on('error', console.error.bind(console, 'connection error:'));
 db.connection.once('open', function() {

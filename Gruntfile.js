@@ -102,11 +102,14 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('build', [
-    'eslint', 'concat', 'uglify'
+    'eslint', 
+    'concat', 
+    'uglify'
   ]);
 
   grunt.registerTask('default', [
-    'build', 'nodemon'
+    'build', 
+    'nodemon'
   ]);
 
 
@@ -121,6 +124,8 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('deploy', [
-    'test', 'build', 'upload'
+    'test', 
+    'build', 
+    'upload'
   ]);
 };
